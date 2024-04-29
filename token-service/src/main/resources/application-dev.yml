@@ -1,0 +1,28 @@
+# Application Properties of PostgreSQL
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/plasma
+    username: postgres
+    password: Compiler
+    driver-class-name: org.postgresql.Driver
+
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+      properties:
+        hibernate:
+          format_sql: false
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
+
+jwt:
+  expiration: 28800
+  secret: nuodatatoken
+  refresh:
+    token:
+      expiration: 7
+server:
+  port: 9099
